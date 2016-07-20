@@ -24,7 +24,7 @@ public class Solution
         {
             System.out.println(i);
 
-            TimeUnit.SECONDS.sleep(1);
+            Thread.sleep(100);
         }
 
         System.out.println("Бум!");
