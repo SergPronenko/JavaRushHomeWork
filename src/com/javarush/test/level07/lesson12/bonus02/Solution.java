@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /* Нужно заменить функциональность программы
-Задача:  Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter). Потом она конвертирует
+Задача:  Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter).
+ Потом она конвертирует
  строки в верхний регистр (Мама превращается в МАМА) и выводит их на экран.
 Новая задача: Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter).
 Потом программа строит новый список. Если в строке чётное число букв, строка удваивается, если нечётное – утраивается.
@@ -49,9 +50,9 @@ public class Solution
 
 
         ArrayList<String> newList = new ArrayList<>();
-        for (int i = 0; i < newList.size(); i++){
-            int s = list.get(i).length();
-            if (s %2 == 0){
+        for (int i = 0; i < list.size(); i++){
+            int len = list.get(i).length();
+            if (len %2 == 0){
                 newList.add(i, list.get(i) + " " + list.get(i));
             }else {
                 newList.add(i, list.get(i) + " " + list.get(i) + " " + list.get(i));
