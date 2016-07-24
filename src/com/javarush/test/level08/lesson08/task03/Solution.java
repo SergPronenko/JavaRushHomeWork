@@ -16,16 +16,16 @@ public class Solution
     public static HashMap<String, String> createMap()
     {
        HashMap<String,String> map = new HashMap<String, String>();
-        map.put("Griffin", "Djustin");
-        map.put("Dior", "Peter");
-        map.put("Dwayn", "Djon");
-        map.put("Sarkisyan", "Lois");
-        map.put("Jackson", "Mikl");
-        map.put("Dimond", "Lessy");
-        map.put("Putin", "Vladimir");
-        map.put("Poroshenko", "Petr");
-        map.put("Girinivskii", "Vladimir");
-        map.put("Balbesovi4", "Balbes");
+        map.put("f1", "Djustin");
+        map.put("f2", "Peter");
+        map.put("f3", "Djon");
+        map.put("f4", "Lois");
+        map.put("f5", "Mikl");
+        map.put("f6", "Lessy");
+        map.put("f7", "Vladimir");
+        map.put("f8", "Petr");
+        map.put("f9", "Vladimir");
+        map.put("f10", "Balbes");
 
         return map;
 
@@ -33,28 +33,18 @@ public class Solution
 
     public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
     {
-        Iterator<HashMap.Entry<String,String>> iterator = map.entrySet().iterator();
-        int count = 0;
-        for (Map.Entry<String,String> m: map.entrySet())
-        {
-            if (m.getValue().equals(name))
-            {
-                count++;
-            }
-
-        }
-        return count;
+        int na = 0;
+        for (Map.Entry<String,String> n : map.entrySet())
+            if (n.getValue().equals(name)) na++;
+        return na;
     }
 
     public static int getCountTheSameLastName(HashMap<String, String> map, String lastName)
     {
-        Iterator<HashMap.Entry<String,String>> iterator = map.entrySet().iterator();
-        int count = 0;
-        for (Map.Entry<String,String> m: map.entrySet()){
-            if (m.getKey().equals(lastName)){
-                count ++;
-            }
-        }
-        return count;
+        int la = 0;
+        for (Map.Entry<String, String> n : map.entrySet())
+            if (n.getKey().equals(lastName)) la++;
+        return la;
+
     }
 }
