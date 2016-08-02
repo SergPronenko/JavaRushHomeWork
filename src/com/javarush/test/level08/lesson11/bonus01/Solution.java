@@ -14,11 +14,27 @@ public class Solution
 {
     public static void main(String[] args) throws IOException
     {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+       /* BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String mount = reader.readLine();
         Date resultDate = new Date(mount + " 1 1");
         System.out.println(mount + " is " + (resultDate.getMonth()+1) +" month");
+        */
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String mount = reader.readLine();
 
+        HashMap<String,Integer> map = new HashMap<String,Integer>();
+        map.put("JANUARY", 1);
+        map.put("FEBRUARY", 2);
+        map.put("MARCH", 3);
+        map.put("APRIL", 4);
+        map.put("MAY", 5);
+        map.put("JUNE", 6);
+        map.put("JULY", 7);
+        map.put("AUGUST", 8);
+        map.put("SEPTEMBER", 9);
+        map.put("OCTOBER", 10);
+        map.put("NOVEMBER", 11);
+        map.put("DECEMBER", 12);
     }
 
 }
