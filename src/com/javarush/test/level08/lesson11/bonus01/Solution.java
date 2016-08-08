@@ -14,27 +14,29 @@ public class Solution
 {
     public static void main(String[] args) throws IOException
     {
-       /* BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String mount = reader.readLine();
-        Date resultDate = new Date(mount + " 1 1");
-        System.out.println(mount + " is " + (resultDate.getMonth()+1) +" month");
-        */
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String mount = reader.readLine();
+        BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
+        String s = reader.readLine();
+        HashMap<Integer,String> map = new HashMap<Integer, String>();
+        map.put(1,"January");
+        map.put(2,"February");
+        map.put(3,"March");
+        map.put(4,"April");
+        map.put(5,"May");
+        map.put(6,"June");
+        map.put(7,"July");
+        map.put(8,"August");
+        map.put(9,"September");
+        map.put(10,"October");
+        map.put(11,"November");
+        map.put(12, "December");
 
-        HashMap<String,Integer> map = new HashMap<String,Integer>();
-        map.put("JANUARY", 1);
-        map.put("FEBRUARY", 2);
-        map.put("MARCH", 3);
-        map.put("APRIL", 4);
-        map.put("MAY", 5);
-        map.put("JUNE", 6);
-        map.put("JULY", 7);
-        map.put("AUGUST", 8);
-        map.put("SEPTEMBER", 9);
-        map.put("OCTOBER", 10);
-        map.put("NOVEMBER", 11);
-        map.put("DECEMBER", 12);
+        for (Map.Entry<Integer,String> pair: map.entrySet()){
+            if (pair.getValue().equals(s)){
+                System.out.println((pair.getValue()+ " is " + pair.getKey() + " month"));
+            }
+
+        }
+
     }
 
 }
